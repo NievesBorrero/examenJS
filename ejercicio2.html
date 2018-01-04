@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Nieves Borrero</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		body{ text-align: center; }
+		form{ text-align: left; }
+	</style>
+	<script src="./js/Alumno.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="./js/ejercicio2.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+	<h1>Nieves Borrero Barea</h1>
+	<form>
+	<fieldset>
+		<legend>Alta del alumno</legend>
+		<br><label>Nombre:  </label><input type="text" id="nombre" placeholder="Nombre" /><span id="errNombre"></span><br><br>
+		<label>Primer apellido:  </label><input type="text" id="ap1" placeholder="Apellido primero" /><span id="errAp1"></span><br><br>
+		<label>Segundo apellido:  </label><input type="text" id="ap2" placeholder="Apellido segundo" /><span id="errAp2"></span><br><br>
+		<label>Fecha de nacimiento:  </label><input type="text" id="fecha" placeholder="dd-mm-aaaa" /><span id="errFecha"></span><br><br>
+	</fieldset><br>
+		<input type="button" id="crear" value="crear">
+		<input type="button" id="limpiar" value="limpiar">
+	</form>
+</body>
+</html>
