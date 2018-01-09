@@ -29,6 +29,15 @@ Alumno.prototype.mostrarDatos = function(){
 }
 
 /**
+ * Comprueba si la fecha es futura y en tal caso lanza una excepción.
+ */
+Alumno.prototype.comprobarFechaFutura = function(){
+	let hoy = new Date();
+	if(this.fecha > hoy)
+		throw "La fecha es futura. Imposible calcular la edad.";
+}
+
+/**
 * Calcula la edad del alumno, en caso de no poner porque la fecha sea futura, lanza una excepción
 * @return edad (String)
 */
@@ -36,9 +45,11 @@ Alumno.prototype.calcularEdad = function(){
 	let hoy = new Date();
 	let mil = hoy.getTime()-this.fecha.getTime();
 	edad = Math.trunc(mil/(365 * 24 * 60 * 60 * 1000));
-	if(this.fecha > hoy)
-		throw 'La fecha es futura. Imposible calcular la edad.';
-	else
+	try {
+		this.comprobarFechaFutura();
 		return 'Edad: '+ edad + ' años';
+	} catch(e) {
+		return e;
+	}		
 }
 }

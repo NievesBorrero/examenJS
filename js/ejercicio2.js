@@ -132,11 +132,8 @@ let mostrar = function(alumno){
 	let ventana = window.open('','','width = 300 height = 200');
 	ventana.document.write('<html><head><title>Nieves Borrero Barea</title></head><body></body></html>');
 	ventana.document.close();
-	try {
-		ventana.document.body.innerHTML = '<h1>Alumno/a</h1>'+alumno.mostrarDatos();
-	} catch(e) {
-		ventana.document.body.innerHTML = e;
-	}
+	ventana.document.body.innerHTML = '<h1>Alumno/a</h1>'+alumno.mostrarDatos();
+	
 }
 
 /**
